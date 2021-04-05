@@ -8,11 +8,8 @@ const fs = require('fs');
 const generateREADME = (answers) =>
 `
 # ${answers.title}
-## [Description](#Description) Description
-${answers.desc1}.
-${answers.desc2}.
-${answers.desc3}.
-${answers.desc4}.
+## Description
+${answers.desc1}. ${answers.desc2}. ${answers.desc3}. ${answers.desc4}.
 ## Table of Contents
 
 ### [Installation](#Installation)
@@ -26,14 +23,13 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 ## License
-${answers.License}
+${answers.license}
 ## Contributing
 ${answers.contributing}
 ## Tests
 ${answers.tests}
 `
  
-
 inquirer
   .prompt([
     {
@@ -61,7 +57,25 @@ inquirer
       name: 'desc4',
       message: 'What did you learn?',
     },
+    {
+      type: 'input',
+      name: 'installation',
+      message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Provide instructions and examples for use.',
+    },
+    {
+      type: 'list',
+      name: 'license',
+      choices: ['MIT License', 'GNU GPLv3', 'Mozilla Public License 2.0', 'Community License'],
+      message: 'Provide instructions and examples for use.',
+    },
    
+
+
   ])
   .then((answers) => {
     const readME = generateREADME(answers);
