@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 // saves the file as a index.html
 const fs = require('fs');
-
 // Takes the answers from inqurer and inputs them in specific location. This is also the html boiler plate for the index.html file.
 // ${ deconstructs the prompt and takes the specific information indicated}
 const generateREADME = (answers) =>
@@ -28,9 +27,7 @@ ${answers.license}
 Github: https://github.com/${answers.github}
 
 Email: ${answers.email}
-
 `
- 
 inquirer
   .prompt([
     {
@@ -105,9 +102,6 @@ inquirer
           name: 'email',
           message: 'What is your email?',
         },
-   
-
-
   ])
   .then((answers) => {
     const readME = generateREADME(answers);
