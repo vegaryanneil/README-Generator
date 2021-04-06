@@ -1,10 +1,11 @@
-// Reads inquirer input
+// Reads Inquirer
 const inquirer = require('inquirer');
-// saves the file as a index.html
 const fs = require('fs');
-// Takes the answers from inqurer and inputs them in specific location. This is also the html boiler plate for the index.html file.
-// ${ deconstructs the prompt and takes the specific information indicated}
+
+// Styling README.md
 const generateREADME = (answers) =>
+
+// ${Pulls answer values from inquirer prompt}
 `
 # ${answers.title} ${answers.license}
 ## Description
@@ -66,6 +67,7 @@ inquirer
       message: 'Provide instructions and examples for use.',
     },
     {
+      // Used this as a way to pull the license images.
       type: 'list',
       name: 'license',
       message: 'What license is used?',
@@ -105,9 +107,9 @@ inquirer
   ])
   .then((answers) => {
     const readME = generateREADME(answers);
-
+// Actually creates the README.md with the styles
     fs.writeFile('README.md', readME, (err) =>
-   
+// When successful will relay a message otherwise error.
       err ? console.log(err) : console.log('Successfully created README.md!')
     );
   });
