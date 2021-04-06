@@ -15,8 +15,8 @@ ${answers.desc1}. ${answers.desc2}. ${answers.desc3}. ${answers.desc4}.
 ### [Installation](#Installation)
 ### [Usage](#Usage)
 ### [License](#License)
-### [Contributing](#Contributing)
-### [Tests](#Tests)
+### [Contributors](#Contributors)
+
 
 ## Installation
 ${answers.installation}
@@ -26,6 +26,7 @@ ${answers.usage}
 ${answers.license}
 ## Contributors
 Github: https://github.com/${answers.github}
+
 
 Email: ${answers.email}
 `
@@ -39,7 +40,7 @@ inquirer
     {
       type: 'input',
       name: 'desc1',
-      message: 'What was your motivation?',
+      message: 'What was your motivation for your project?',
     },
     {
       type: 'input',
@@ -49,22 +50,22 @@ inquirer
     {
       type: 'input',
       name: 'desc3',
-      message: 'What problem does it solve?',
+      message: 'What problem does your project solve?',
     },
     {
       type: 'input',
       name: 'desc4',
-      message: 'What did you learn?',
+      message: 'What did you learn after building your project?',
     },
     {
       type: 'input',
       name: 'installation',
-      message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+      message: 'What are the steps required to install your project?',
     },
     {
       type: 'input',
       name: 'usage',
-      message: 'Provide instructions and examples for use.',
+      message: 'Provide instructions and examples for usage.',
     },
     {
       // Used this as a way to pull the license images.
@@ -80,17 +81,17 @@ inquirer
         {
           key: 'b',
           name: 'GNU GPLv3',
-          value: '![GPL License](https://img.shields.io/cran/l/devtools)' 
+          value: '![GPL License](https://img.shields.io/cran/l/devtools)',
         }, 
         {
           key: 'c',
           name: 'PyPI',
-          value: '![BSD License](https://img.shields.io/pypi/l/django)' 
+          value: '![BSD License](https://img.shields.io/pypi/l/django)' ,
         }, 
         {
           key: 'd',
           name: 'Apache 2',
-          value: '![Apache 2](https://img.shields.io/hexpm/l/plug?style=plastic)' 
+          value: '![Apache 2](https://img.shields.io/hexpm/l/plug?style=plastic)',
         }, 
       ],
     },

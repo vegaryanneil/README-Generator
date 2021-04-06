@@ -1,7 +1,7 @@
 
 # README Generator ![MIT License](https://img.shields.io/crates/l/test1)
 ## Description
-Lorem Ipsum. Lorem. Loreamaks. Lorem.
+asknkanf. afna. skfnaksfknknaf. askfnaksfnkansf.
 ## Table of Contents
 
 ### [Installation](#Installation)
@@ -11,12 +11,13 @@ Lorem Ipsum. Lorem. Loreamaks. Lorem.
 ### [Tests](#Tests)
 
 ## Installation
-Not sure
+asdjasldalsdkl12
 ## Usage
-Download
+asdasdknaskdnkaldnkadnk
 ## License
 ![MIT License](https://img.shields.io/crates/l/test1)
 ## Contributors
 Github: https://github.com/vegaryanneil
-Email: vegaryan95@gmail.com
 
+
+Email: vegaryanneil@gmail.com
