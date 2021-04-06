@@ -1,7 +1,7 @@
 
-# README Generator
+# README Generator ![MIT License](https://img.shields.io/crates/l/test1)
 ## Description
-To create a readme generator. To simplify the process of creating a README. Reduces the excessive time used to create a README. I learned how to use Inquirer to generate a README.
+Lorem Ipsum. Lorem. Loreamaks. Lorem.
 ## Table of Contents
 
 ### [Installation](#Installation)
@@ -11,12 +11,12 @@ To create a readme generator. To simplify the process of creating a README. Redu
 ### [Tests](#Tests)
 
 ## Installation
-testing
+Not sure
 ## Usage
-Whenever you create a project
+Download
 ## License
-GNU GPLv3
-## Contributing
-undefined
-## Tests
-undefined
+![MIT License](https://img.shields.io/crates/l/test1)
+## Contributors
+Github: https://github.com/vegaryanneil
+Email: vegaryan95@gmail.com
+

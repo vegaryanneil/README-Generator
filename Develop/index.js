@@ -7,7 +7,7 @@ const fs = require('fs');
 // ${ deconstructs the prompt and takes the specific information indicated}
 const generateREADME = (answers) =>
 `
-# ${answers.title}
+# ${answers.title} ${answers.license}
 ## Description
 ${answers.desc1}. ${answers.desc2}. ${answers.desc3}. ${answers.desc4}.
 ## Table of Contents
@@ -24,10 +24,11 @@ ${answers.installation}
 ${answers.usage}
 ## License
 ${answers.license}
-## Contributing
-${answers.contributing}
-## Tests
-${answers.tests}
+## Contributors
+Github: https://github.com/${answers.github}
+
+Email: ${answers.email}
+
 `
  
 inquirer
@@ -70,9 +71,40 @@ inquirer
     {
       type: 'list',
       name: 'license',
-      choices: ['MIT License', 'GNU GPLv3', 'Mozilla Public License 2.0', 'Community License'],
-      message: 'Provide instructions and examples for use.',
+      message: 'What license is used?',
+      choices:[
+        {
+          key: 'a',
+          name: 'MIT License',
+          value: '![MIT License](https://img.shields.io/crates/l/test1)',
+        }, 
+        {
+          key: 'b',
+          name: 'GNU GPLv3',
+          value: '![GPL License](https://img.shields.io/cran/l/devtools)' 
+        }, 
+        {
+          key: 'c',
+          name: 'PyPI',
+          value: '![BSD License](https://img.shields.io/pypi/l/django)' 
+        }, 
+        {
+          key: 'd',
+          name: 'Apache 2',
+          value: '![Apache 2](https://img.shields.io/hexpm/l/plug?style=plastic)' 
+        }, 
+      ],
     },
+        {
+          type: 'input',
+          name: 'github',
+          message: 'What is your github userID?',
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email?',
+        },
    
 
 
@@ -85,17 +117,3 @@ inquirer
       err ? console.log(err) : console.log('Successfully created README.md!')
     );
   });
-
-// // TODO: Include packages needed for this application
-
-// // TODO: Create an array of questions for user input
-// const questions = [];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
